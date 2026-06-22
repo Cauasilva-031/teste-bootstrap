@@ -1,48 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    
-
-        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa 2026</title>
+    <link id="tema" rel="stylesheet" href="./css/stylea.css">
 
 </head>
 
 <body>
-    <table border="2">
-        <tr>
-            <th> Produto </th>
-            <th> Valor </th>
-            <th> Qtd Estoque </th>
-        </tr>
-        <tr>
-            <td> Arroz </td>
-            <td> R$ 25,00</td>
-            <td> 650 </td>
-        </tr>
-        
-        <tr>
-            <td> Feijão </td>
-            <td>R$ 9,00</td>
-            <td> 1000 </td>
+
+    <nav class="navbar">
+        <ul>
+            <li> <a href="./index.html">Copa 2026 </a>  </li>
+            <li> <a href="./brasil.html">Brasil </a>   </li>
+            <li> <a href="./calendario.html">Calendário </a>   </li>
+            <li> <a href="./paisesSede.html"> Países Sede</a> </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1>Seleção Brasileira</h1>
+
+        <img src="./img/copa.PNG" alt="logo da copa"/> 
+
+        <p>
+            O Brasil é o maior campeão da história das 
+            Copas do Mundo com cinco títulos.
+        </p>
+        <p>
+            A expectativa é que a seleção chega forte para 
+            a Copa de 2026. 
+        </p>
+
+       <button onclick="trocarTema()"> 
+            Trocar Tema 
+       </button>
+    </div>
+
+    <script>
+
+        let temaAtual = "stylea";
+
+        function trocarTema() {
+            const link = document.getElementById("tema");
+
+            if(temaAtual === "stylea"){
+                link.href="./css/styleb.css"
+                temaAtual="styleb"
+            } else {
+                link.href = "./css/stylea.css"
+                temaAtual = "stylea"
+            }
+
+        }
 
 
 
-
-        </tr>
-
-
-
-        
-
-
-    </table>
-
-   
-
+    </script>
 </body>
 
 </html>
