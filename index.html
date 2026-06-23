@@ -1,186 +1,357 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Projeto</title>
 
-    <!-- Bootstrap  5.2 -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#090611;
+            color:white;
+        }
+
+        main{
+            background:linear-gradient(
+                180deg,
+                #090611 0%,
+                #140a29 50%,
+                #1f1147 100%
+            );
+            min-height:100vh;
+        }
+
+        header{
+            background:#090611;
+            border-bottom:1px solid rgba(139,92,246,.3);
+            box-shadow:0 0 20px rgba(139,92,246,.25);
+        }
+
+        .logo{
+            color:#c084fc;
+            text-shadow:0 0 15px #8b5cf6;
+        }
+
+        nav a{
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#c4b5fd !important;
+            text-shadow:0 0 10px #8b5cf6;
+        }
+
+        #home h2{
+            color:#c4b5fd;
+            text-shadow:0 0 15px rgba(139,92,246,.4);
+        }
+
+        #home p{
+            color:#ddd6fe;
+        }
+
+        section h2{
+            color:#c4b5fd;
+        }
+
+        .card{
+            background:#140a29;
+            border:1px solid rgba(139,92,246,.3);
+            border-radius:16px;
+            color:white;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            border-color:#8b5cf6;
+            box-shadow:0 10px 30px rgba(139,92,246,.3);
+        }
+
+        .text-primary{
+            color:#8b5cf6 !important;
+        }
+
+        .card-img-top{
+            height:220px;
+            object-fit:cover;
+        }
+
+        .btn-outline-primary{
+            border-color:#8b5cf6;
+            color:#c4b5fd;
+        }
+
+        .btn-outline-primary:hover{
+            background:#8b5cf6;
+            border-color:#8b5cf6;
+            color:white;
+        }
+
+        footer{
+            background:#090611;
+            border-top:1px solid rgba(139,92,246,.3);
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Comentário HTML -->
-    <header class="py-3"
-style="
-background:#090611;
-box-shadow:0 0 20px rgba(139,92,246,.3);
-">
+    <!-- HEADER -->
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
 
-    <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="m-0 fw-bold logo">
+                MEU PROJETO
+            </h1>
 
-        <h1 class="m-0 fw-bold"
-        style="
-        color:#c084fc;
-        text-shadow:0 0 15px #8b5cf6;
-        ">
-            MEU PROJETO
-        </h1>
+            <nav>
+                <a href="#" class="text-light me-4 text-decoration-none">
+                    Painel
+                </a>
 
-        <nav>
-            <a href="#" class="text-light me-4 text-decoration-none">
-                Painel
-            </a>
+                <a href="#" class="text-light me-4 text-decoration-none">
+                    Análise
+                </a>
 
-            <a href="#" class="text-light me-4 text-decoration-none">
-                Análise
-            </a>
+                <a href="#" class="text-light me-4 text-decoration-none">
+                    API
+                </a>
 
-            <a href="#" class="text-light me-4 text-decoration-none">
-                API
-            </a>
+                <button
+                    class="btn btn-outline-light rounded-pill px-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">
+                    Login
+                </button>
+            </nav>
 
-            <button class="btn btn-outline-light rounded-pill px-4"
-            data-bs-toggle="modal"
-            data-bs-target="#modalLogin">
-            Login
+        </div>
+    </header>
 
-                
-                
-            </button>
-        </nav>
-
-    </div>
-</header>
-
+    <!-- MAIN -->
     <main>
+
         <section id="home" class="container py-5 text-center">
             <h2 class="display-5 fw-bold">
                 Sistema simples com Bootstrap
             </h2>
+
             <p class="lead">
                 Uma página inicial usando HTML5, Bootstrap,
-                modal de login, cards e validação com
-                JavaScript.
+                modal de login, cards e validação com JavaScript.
             </p>
-
         </section>
 
         <section id="recursos" class="container py-4">
+
             <h2 class="mb-4">Features</h2>
+
             <div class="row g-4">
+
                 <article class="col-md-4">
                     <div class="card h-100 p-3">
+
                         <i class="bi bi-window fs-1 text-primary"></i>
+
                         <h3 class="h5 mt-3">HTML5</h3>
-                        <p>Estrutura semântica com header, main, section, article e footer.</p>
+
+                        <p>
+                            Estrutura semântica com header, main,
+                            section, article e footer.
+                        </p>
+
                     </div>
                 </article>
+
                 <article class="col-md-4">
                     <div class="card h-100 p-3">
+
                         <i class="bi bi-bootstrap fs-1 text-primary"></i>
+
                         <h3 class="h5 mt-3">Bootstrap</h3>
-                        <p>Layout responsivo com botões, cards, modal, grid e navbar.</p>
+
+                        <p>
+                            Layout responsivo com botões, cards,
+                            modal, grid e navbar.
+                        </p>
+
                     </div>
                 </article>
+
                 <article class="col-md-4">
                     <div class="card h-100 p-3">
+
                         <i class="bi bi-code-slash fs-1 text-primary"></i>
+
                         <h3 class="h5 mt-3">JavaScript</h3>
-                        <p>Validação simples de e-mail e senha antes de entrar no admin.</p>
+
+                        <p>
+                            Validação simples de e-mail e senha
+                            antes de entrar no admin.
+                        </p>
+
                     </div>
                 </article>
+
             </div>
+
         </section>
 
         <section class="container py-5">
+
             <h2 class="mb-4">Album</h2>
+
             <div class="row g-3">
+
                 <article class="col-md-4">
                     <div class="card">
+
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe6_z-FTjQN_U5VGHROgBP1Tnd6Qy60P-Atd9WFHzkUA&s=10"
-                            class="card-img-top" alt="Curso de HTML">
+                            class="card-img-top"
+                            alt="Curso HTML">
+
                         <div class="card-body">
-                            <p class="card-text">Curso de HTML.</p><button
-                                class="btn btn-sm btn-outline-primary">Ver</button>
+                            <p class="card-text">Curso de HTML.</p>
+
+                            <button class="btn btn-sm btn-outline-primary">
+                                Ver
+                            </button>
                         </div>
+
                     </div>
                 </article>
+
                 <article class="col-md-4">
                     <div class="card">
+
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe6_z-FTjQN_U5VGHROgBP1Tnd6Qy60P-Atd9WFHzkUA&s=10"
-                            class="card-img-top" alt="Curso de HTML">
+                            class="card-img-top"
+                            alt="Curso CSS">
+
                         <div class="card-body">
-                            <p class="card-text">Curso de CSS.</p><button
-                                class="btn btn-sm btn-outline-primary">Ver</button>
+                            <p class="card-text">Curso de CSS.</p>
+
+                            <button class="btn btn-sm btn-outline-primary">
+                                Ver
+                            </button>
                         </div>
+
                     </div>
                 </article>
+
                 <article class="col-md-4">
                     <div class="card">
+
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe6_z-FTjQN_U5VGHROgBP1Tnd6Qy60P-Atd9WFHzkUA&s=10"
-                            class="card-img-top" alt="Curso de HTML">
+                            class="card-img-top"
+                            alt="Curso JavaScript">
+
                         <div class="card-body">
-                            <p class="card-text">Curso de JavaScript.</p><button
-                                class="btn btn-sm btn-outline-primary">Ver</button>
+                            <p class="card-text">Curso de JavaScript.</p>
+
+                            <button class="btn btn-sm btn-outline-primary">
+                                Ver
+                            </button>
                         </div>
+
                     </div>
                 </article>
+
             </div>
+
         </section>
+
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <p class="m-0"> Projeto criado para aula de Bootstrap 5 </p>
+    <!-- FOOTER -->
+    <footer class="text-white text-center py-4">
+        <p class="m-0">
+            Projeto criado para aula de Bootstrap 5
+        </p>
     </footer>
 
-    <!-- Modal  -->
+    <!-- MODAL (mantido igual) -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-hidden="false">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form id="formLogin">
+
                     <div class="modal-header">
                         <h5 class="modal-title">Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+
+                        <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
                         </button>
                     </div>
+
                     <div class="modal-body">
 
                         <div class="mb-3">
-                            <label for="email" class="form-label">E-mail</label>
-                            <div class="input-group"><span class="input-group-text"><i
-                                        class="bi bi-envelope"></i></span>
-                                <input type="email" id="email" class="form-control" placeholder="seuemail@exemplo.com">
+                            <label for="email" class="form-label">
+                                E-mail
+                            </label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+
+                                <input type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="seuemail@exemplo.com">
                             </div>
                         </div>
-
 
                         <div class="mb-3">
-                            <label for="senha" class="form-label">Senha</label>
-                            <div class="input-group"><span class="input-group-text"><i class="bi bi-lock"></i></span>
-                                <input type="password" id="senha" class="form-control">
+                            <label for="senha" class="form-label">
+                                Senha
+                            </label>
+
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-lock"></i>
+                                </span>
+
+                                <input type="password"
+                                    id="senha"
+                                    class="form-control">
                             </div>
                         </div>
-                        <div id="mensagemErro" class="alert alert-danger d-none">Email ou senha incorretos</div>
+
+                        <div id="mensagemErro"
+                            class="alert alert-danger d-none">
+                            Email ou senha incorretos
+                        </div>
+
                     </div>
+
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Entrar</button>
+                        <button type="button"
+                            class="btn btn-secondary">
+                            Cancelar
+                        </button>
+
+                        <button type="submit"
+                            class="btn btn-primary">
+                            Entrar
+                        </button>
                     </div>
+
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-                    <!-- Bootstrap 5.2 -->
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                        crossorigin="anonymous"></script>
 </body>
-
 </html>
